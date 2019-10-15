@@ -28,6 +28,8 @@ videoRef = React.createRef();
     showDetections = predictions => {
 
       predictions.forEach(prediction => {
+
+
         const x = prediction.bbox[0];
         const y = prediction.bbox[1];
         const width = prediction.bbox[2];
@@ -43,8 +45,7 @@ videoRef = React.createRef();
     };
 
     componentDidMount() {
-      if (navigator.mediaDevices.getUserMedia
-        || navigator.mediaDevices.webkitGetUserMedia) {
+      if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
         // define a Promise that'll be used to load the webcam and read its frames
         const webcamPromise = navigator.mediaDevices
           .getUserMedia({
