@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <title>---</title>
+  <!-- Load TensorFlow.js-->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.0.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+</head>
+
+<body>
+  <!-- Load our React component. -->
+
+  <!-- We will put our React component inside this div. -->
+  <div id="root"></div>
+
+  <style>
+    video {
+      width: 100% !important;
+      height: auto !important;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    body{
+      margin: 0;
+    }
+
+    section{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100vw;
+      height: 29vh;
+      z-index: 1000;
+      position: absolute;
+      flex-direction: column;
+    }
+
+    section h1{
+      margin: 0;
+      font-size: 7vw;
+      font-family: arial narrow;
+      color: white;
+      display: block;
+      text-transform: uppercase;
+      -webkit-text-stroke: 1px black;
+    }
+  </style>
+
+</body>
